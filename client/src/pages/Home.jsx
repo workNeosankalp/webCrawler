@@ -52,7 +52,7 @@ const Home = () => {
             initial={{ opacity: 0, x: -100, rotate: -15 }}
             animate={{ opacity: 1, x: 0, rotate: -8 }}
             transition={{ duration: 1, delay: 0.5 }}
-            style={{ y: y1, rotate: rotate1 }}
+            // style={{ y: y1, rotate: rotate1 }}
             className="absolute left-4 top-32 hidden lg:block w-80 h-96 rounded-3xl overflow-hidden shadow-2xl shadow-[#FF6B6B]/20 border-4 border-[#FF6B6B]/30"
           >
             {featuredPrompts[0]?.imageUrl ? (
@@ -89,7 +89,7 @@ const Home = () => {
             initial={{ opacity: 0, x: 100, rotate: 15 }}
             animate={{ opacity: 1, x: 0, rotate: 8 }}
             transition={{ duration: 1, delay: 0.7 }}
-            style={{ y: y2, rotate: rotate2 }}
+            // style={{ y: y2, rotate: rotate2 }}
             className="absolute right-4 bottom-32 hidden lg:block w-80 h-96 rounded-3xl overflow-hidden shadow-2xl shadow-[#FF6B6B]/20 border-4 border-[#FF6B6B]/30"
           >
             {featuredPrompts[1]?.imageUrl ? (
@@ -522,8 +522,6 @@ const Home = () => {
           </motion.div>
         </section>
       </div>
-
-      
     </>
   );
 };
