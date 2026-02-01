@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import PromptsPage from "./pages/PromptsPage";
 import LearnMore from "./pages/LearnMore";
-// import GetStarted from "./pages/GetStarted";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Loader from "./components/Loader";
 
@@ -32,6 +32,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/prompts" element={<PromptsPage />} />
           <Route path="/learn-more" element={<LearnMore />} />
+          <Route path="/about" element={<About />} />
           {/* <Route path="/get-started" element={<GetStarted />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>

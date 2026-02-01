@@ -47,7 +47,7 @@ const PromptsPage = () => {
   return (
     <>
       <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -57,7 +57,7 @@ const PromptsPage = () => {
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               All{" "}
-              <span className="bg-gradient-to-r from-[#FF6B6B] to-[#D64639] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#FF6B6B] to-[#D64639] bg-clip-text text-transparent">
                 Prompts
               </span>
             </h1>
@@ -84,7 +84,7 @@ const PromptsPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12"
           >
             <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <p className="text-gray-600 text-sm mb-1">Total Prompts</p>
@@ -92,17 +92,15 @@ const PromptsPage = () => {
                 {prompts.length}
               </p>
             </div>
-            <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <p className="text-gray-600 text-sm mb-1">Categories</p>
-              <p className="text-3xl font-bold text-[#FF6B6B]">12+</p>
-            </div>
+            
             <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <p className="text-gray-600 text-sm mb-1">Updated</p>
               <p className="text-3xl font-bold text-[#D64639]">Weekly</p>
             </div>
+           
           </motion.div>
 
-          {/* Prompts Grid */}
+          {/* Prompts Grid - 4 columns */}
           {prompts.length === 0 ? (
             <div className="text-center py-20">
               <svg
@@ -128,7 +126,7 @@ const PromptsPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             >
               {prompts.map((item, index) => (
                 <motion.div
@@ -151,9 +149,6 @@ const PromptsPage = () => {
           )}
         </div>
       </div>
-
-      {/* Footer */}
-      <Footer />
     </>
   );
 };

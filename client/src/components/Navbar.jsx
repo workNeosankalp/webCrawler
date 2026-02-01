@@ -45,12 +45,12 @@ const Navbar = () => {
             >
               About
             </Link>
-            <Link
+            {/* <Link
               to="/contact"
               className="px-6 py-2.5 bg-[#FF6B6B] text-white rounded-full font-semibold hover:bg-[#D64639]  transition-colors duration-300"
             >
               Talk to Us
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -114,13 +114,13 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <Link
+              {/* <Link
                 to="/contact"
                 className="px-6 py-2.5 bg-[#FF6B6B] text-white rounded-full font-semibold hover:bg-[#D64639] transition-colors duration-300 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Talk to Us
-              </Link>
+              </Link> */}
             </div>
           </div>
         )}
