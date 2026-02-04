@@ -12,7 +12,9 @@ const Home = () => {
   useEffect(() => {
     const fetchFeaturedPrompts = async () => {
       try {
-        const response = await axios.get("/api/prompts?limit=4");
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_BASE_URL}/api/prompts?limit=4`,
+        );
         setFeaturedPrompts(response.data.slice(0, 4));
       } catch (error) {
         console.error("Error fetching prompts:", error);

@@ -19,7 +19,13 @@ const PromptsPage = () => {
 
     try {
       setLoading(true);
-      const response = await axios.get("/api/prompts");
+      // dev
+      // const response = await axios.get("/api/prompts");
+
+      // prod
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_BASE_URL}/api/prompts`,
+      );
 
       const elapsedTime = Date.now() - startTime;
       const remainingTime = Math.max(0, 2000 - elapsedTime);
@@ -92,12 +98,11 @@ const PromptsPage = () => {
                 {prompts.length}
               </p>
             </div>
-            
+
             <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <p className="text-gray-600 text-sm mb-1">Updated</p>
               <p className="text-3xl font-bold text-[#D64639]">Weekly</p>
             </div>
-           
           </motion.div>
 
           {/* Prompts Grid - 4 columns */}
