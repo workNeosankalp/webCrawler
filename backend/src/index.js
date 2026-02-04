@@ -13,7 +13,11 @@ connectDB();
 
 // CORS Configuration
 const corsOptions = {
-  origin: ["http://localhost:5173", "http://localhost:3000"],
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://webcrawler-8ybq.onrender.com"
+  ],
   credentials: true,
   optionsSuccessStatus: 200,
 };
@@ -24,7 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static images
-app.use("/images", express.static(path.join(__dirname, "../public/images")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Routes
 app.use("/api/prompts", promptRoutes);
