@@ -9,7 +9,6 @@ const Home = () => {
   const [copiedId, setCopiedId] = useState(null);
   const { scrollYProgress } = useScroll();
 
-
   useEffect(() => {
     const fetchFeaturedPrompts = async () => {
       try {
