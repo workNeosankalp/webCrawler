@@ -102,7 +102,7 @@ const Home = () => {
                 src={
                   featuredPrompts[0].imageUrl.startsWith("http")
                     ? featuredPrompts[0].imageUrl
-                    : `http://localhost:5000${featuredPrompts[0].imageUrl}`
+                    : `${import.meta.env.VITE_API_BASE_URL}${featuredPrompts[0].imageUrl}`
                 }
                 alt="AI Generated"
                 className="w-full h-full object-cover"
@@ -138,7 +138,7 @@ const Home = () => {
                 src={
                   featuredPrompts[1].imageUrl.startsWith("http")
                     ? featuredPrompts[1].imageUrl
-                    : `http://localhost:5000${featuredPrompts[1].imageUrl}`
+                    : `${import.meta.env.VITE_API_BASE_URL}${featuredPrompts[1].imageUrl}`
                 }
                 alt="AI Generated"
                 className="w-full h-full object-cover"
@@ -345,7 +345,7 @@ const Home = () => {
                               src={
                                 item.imageUrl.startsWith("http")
                                   ? item.imageUrl
-                                  : `http://localhost:5000${item.imageUrl}`
+                                  : `${import.meta.env.VITE_API_BASE_URL}${item.imageUrl}`
                               }
                               alt={item.title || "Prompt image"}
                               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

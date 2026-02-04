@@ -22,7 +22,7 @@ const PromptCard = ({ prompt, title, tags, category, createdAt, imageUrl }) => {
             src={
               imageUrl.startsWith("http")
                 ? imageUrl
-                : `http://localhost:5000${imageUrl}`
+                : `${import.meta.env.VITE_API_BASE_URL}${imageUrl}`
             }
             alt={title || "Prompt image"}
             className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
